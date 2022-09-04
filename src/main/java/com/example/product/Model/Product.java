@@ -1,6 +1,8 @@
 package com.example.product.Model;
 
 
+import org.springframework.http.HttpStatus;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
