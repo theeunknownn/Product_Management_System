@@ -19,5 +19,14 @@ public class ProductService {
         return repo.findAll();
     }
 
+    public Product save(Product product){
+        System.out.println("Product Added Successfully");
+        return repo.save(product);
+    }
+
+
+
+
+
 
 }
