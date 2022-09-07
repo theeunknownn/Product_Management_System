@@ -40,6 +40,29 @@ public class ProductController {
         }
     }
 
+    //To Update the data of product
+    @PutMapping("/put/{id}")
+    public ResponseEntity<Product> update(@RequestBody Product product, @PathVariable ("id")int id) {
+        try {
+            Product existProduct = service.getById(id);
+            service.save(product);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    //To Delete the data of product
+    @DeleteMapping("/delete/{id}")
+    public void delete(@PathVariable("id")int id){
+        service.delete(id);
+    }
+
+
+
+
+
+
 
 
 
