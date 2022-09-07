@@ -29,6 +29,11 @@ public class ProductService {
         return repo.findById(id).get();
     }
 
+    public void delete(int id){
+         repo.deleteById(id);
+    }
+
+
 
 
 
